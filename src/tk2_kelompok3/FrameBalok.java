@@ -68,6 +68,11 @@ public class FrameBalok extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("KEMBALI");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, 360, 60));
 
         bReset.setBackground(new java.awt.Color(36, 93, 196));
@@ -162,6 +167,12 @@ public class FrameBalok extends javax.swing.JFrame {
         // TODO add your handling code here:
          tTinggi.requestFocus();
     }//GEN-LAST:event_tLebarActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        new DashboardFrame().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
