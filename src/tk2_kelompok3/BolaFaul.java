@@ -1,3 +1,6 @@
+package tk2_kelompok3;
+
+
 public class BolaFaul {
     
     private double jariJari;
