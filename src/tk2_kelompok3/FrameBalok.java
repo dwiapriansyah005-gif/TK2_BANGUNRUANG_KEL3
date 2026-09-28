@@ -1,7 +1,13 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 package tk2_kelompok3;
 
-
+/**
+ *
+ * @author user
+ */
 public class FrameBalok extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FrameBalok.class.getName());
@@ -22,152 +28,112 @@ public class FrameBalok extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        tPanjang = new javax.swing.JTextField();
-        tLebar = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        tTinggi = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        bSimpan = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         tVolume = new javax.swing.JLabel();
         tLuasPermukaan = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        bHitung = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         bReset = new javax.swing.JButton();
+        tLebar = new javax.swing.JTextField();
+        tPanjang = new javax.swing.JTextField();
+        tTinggi = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 204, 204));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("BALOK");
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setText("Panjang                        :");
-
-        tPanjang.addActionListener(this::tPanjangActionPerformed);
-
-        jLabel3.setText("Lebar                             :");
-
-        jLabel4.setText("Tinggi                           :");
-
-        bSimpan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        bSimpan.setText("HITUNG");
-        bSimpan.addActionListener(this::bSimpanActionPerformed);
-
-        tVolume.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tVolume.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        tVolume.setForeground(new java.awt.Color(255, 255, 255));
+        tVolume.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tVolume.setText("0");
+        jPanel1.add(tVolume, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 200, -1));
 
-        tLuasPermukaan.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tLuasPermukaan.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        tLuasPermukaan.setForeground(new java.awt.Color(255, 255, 255));
+        tLuasPermukaan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tLuasPermukaan.setText("0");
+        jPanel1.add(tLuasPermukaan, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 200, -1));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel5.setText("Volume                :");
+        bHitung.setBackground(new java.awt.Color(36, 93, 196));
+        bHitung.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        bHitung.setForeground(new java.awt.Color(255, 255, 255));
+        bHitung.setText("HITUNG");
+        bHitung.addActionListener(this::bHitungActionPerformed);
+        jPanel1.add(bHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 420, 170, 50));
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel6.setText("Luas Permukaan :");
+        jButton1.setBackground(new java.awt.Color(36, 93, 196));
+        jButton1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("KEMBALI");
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, 360, 60));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tLuasPermukaan, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
-                    .addComponent(tVolume, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(93, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(tVolume))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(tLuasPermukaan))
-                .addContainerGap(46, Short.MAX_VALUE))
-        );
-
-        bReset.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        bReset.setBackground(new java.awt.Color(36, 93, 196));
+        bReset.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        bReset.setForeground(new java.awt.Color(255, 255, 255));
         bReset.setText("RESET");
         bReset.addActionListener(this::bResetActionPerformed);
+        jPanel1.add(bReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 420, 180, 50));
+
+        tLebar.setBackground(new java.awt.Color(255, 255, 255));
+        tLebar.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        tLebar.setForeground(new java.awt.Color(10, 37, 86));
+        tLebar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tLebar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 2));
+        tLebar.addActionListener(this::tLebarActionPerformed);
+        jPanel1.add(tLebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, 300, 60));
+
+        tPanjang.setBackground(new java.awt.Color(255, 255, 255));
+        tPanjang.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        tPanjang.setForeground(new java.awt.Color(10, 37, 86));
+        tPanjang.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tPanjang.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 2));
+        tPanjang.addActionListener(this::tPanjangActionPerformed);
+        jPanel1.add(tPanjang, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 300, 60));
+
+        tTinggi.setBackground(new java.awt.Color(255, 255, 255));
+        tTinggi.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        tTinggi.setForeground(new java.awt.Color(10, 37, 86));
+        tTinggi.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tTinggi.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 102), 2));
+        tTinggi.addActionListener(this::tTinggiActionPerformed);
+        jPanel1.add(tTinggi, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 450, 300, 60));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Icon/Background Balok.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 600));
+
+        jTextField1.setText("jTextField1");
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(36, 36, 36)
-                            .addComponent(bSimpan))
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(bReset, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tLebar, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tPanjang, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tTinggi, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(29, 29, 29))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel1)
-                .addGap(62, 62, 62)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(50, 50, 50)
-                        .addComponent(jLabel3)
-                        .addGap(50, 50, 50)
-                        .addComponent(jLabel4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(tPanjang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
-                        .addComponent(tLebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
-                        .addComponent(tTinggi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(100, 100, 100)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bSimpan)
-                    .addComponent(bReset))
-                .addGap(18, 18, 18)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(61, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void tPanjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tPanjangActionPerformed
         // TODO add your handling code here:
+         tLebar.requestFocus();
+        
     }//GEN-LAST:event_tPanjangActionPerformed
 
-    private void bSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSimpanActionPerformed
+    private void tTinggiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tTinggiActionPerformed
+        // TODO add your handling code here:
+         bHitung.doClick();
+    }//GEN-LAST:event_tTinggiActionPerformed
+
+    private void bHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bHitungActionPerformed
         // TODO add your handling code here:
         BalokBagas balok = new BalokBagas();
 
@@ -180,8 +146,7 @@ public class FrameBalok extends javax.swing.JFrame {
 
         tVolume.setText(String.valueOf(balok.getVolume()));
         tLuasPermukaan.setText(String.valueOf(balok.getLuasPermukaan()));
-
-    }//GEN-LAST:event_bSimpanActionPerformed
+    }//GEN-LAST:event_bHitungActionPerformed
 
     private void bResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bResetActionPerformed
         // TODO add your handling code here:
@@ -190,8 +155,13 @@ public class FrameBalok extends javax.swing.JFrame {
         tTinggi.setText(null);
         tVolume.setText("0");
         tLuasPermukaan.setText("0");
-
+        tPanjang.requestFocus();
     }//GEN-LAST:event_bResetActionPerformed
+
+    private void tLebarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tLebarActionPerformed
+        // TODO add your handling code here:
+         tTinggi.requestFocus();
+    }//GEN-LAST:event_tLebarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -219,15 +189,12 @@ public class FrameBalok extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bHitung;
     private javax.swing.JButton bReset;
-    private javax.swing.JButton bSimpan;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField tLebar;
     private javax.swing.JLabel tLuasPermukaan;
     private javax.swing.JTextField tPanjang;
