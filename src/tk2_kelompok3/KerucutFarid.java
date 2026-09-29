@@ -2,14 +2,21 @@ package tk2_kelompok3;
 public class KerucutFarid {
     
     // Atribut
-    private double jariJari, tinggi, garisPelukis;
+    private double jariJari, tinggi, garisPelukis, volume, luasPermukaan;
 
     // Construcktor
+    
+    public KerucutFarid() {
+    
+    }
+
     public KerucutFarid(double jariJari, double tinggi, double garisPelukis) {
         this.jariJari = jariJari;
         this.tinggi = tinggi;
         this.garisPelukis = garisPelukis;
     }
+    
+    
 
     // Setter & Getter
     public void setJariJari(double r) { this.jariJari = r; }
@@ -22,10 +29,21 @@ public class KerucutFarid {
     public double getGarisPelukis() { return garisPelukis; }
 
     // Method hitung (return)
-    public double volume() {
-        return (1.0/3.0) * Math.PI * jariJari * jariJari * tinggi;
+    public void volume() {
+       volume = (1.0/3.0) * Math.PI * jariJari * jariJari * tinggi;
     }
-    public double luasPermukaan() {
-        return Math.PI * jariJari * (jariJari + garisPelukis);
+    public void luasPermukaan() {
+        luasPermukaan= Math.PI * jariJari * (jariJari + garisPelukis);
     }
+
+    public double getVolume() {
+        return volume;
+    }
+
+    public double getLuasPermukaan() {
+        return luasPermukaan;
+    }
+
+  
+    
 }
