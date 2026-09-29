@@ -281,6 +281,11 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         btnLimas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Icon/Forward Icon.png"))); // NOI18N
         btnLimas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLimas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLimasMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -370,6 +375,12 @@ public class DashboardFrame extends javax.swing.JFrame {
         new FrameBalok().setVisible(true);
         dispose();
     }//GEN-LAST:event_btnBalokMouseClicked
+
+    private void btnLimasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLimasMouseClicked
+        // TODO add your handling code here:
+        new FrameLimassegiempat().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnLimasMouseClicked
 
     /**
      * @param args the command line arguments
