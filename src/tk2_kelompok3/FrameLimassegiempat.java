@@ -48,6 +48,7 @@ public class FrameLimassegiempat extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -110,6 +111,7 @@ public class FrameLimassegiempat extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void tSisialasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tSisialasActionPerformed

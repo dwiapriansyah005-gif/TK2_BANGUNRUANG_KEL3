@@ -17,14 +17,6 @@ public class FrameKerucut extends javax.swing.JFrame {
      */
     public FrameKerucut() {
         initComponents();
-        reset();
-    }
-    void reset(){
-        tJarijari.setText(null);
-        tTinggi.setText(null);
-        tGaris.setText(null);
-        tVolume.setText(null);
-        tLuaspermukaan.setText(null);
     }
 
     /**
@@ -36,192 +28,135 @@ public class FrameKerucut extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        tLuaspermukaan = new javax.swing.JLabel();
+        tVolume = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        btnHitung = new javax.swing.JButton();
+        btnReset = new javax.swing.JButton();
         tJarijari = new javax.swing.JTextField();
         tTinggi = new javax.swing.JTextField();
         tGaris = new javax.swing.JTextField();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        tVolume = new javax.swing.JLabel();
-        tLuaspermukaan = new javax.swing.JLabel();
-        btnHitung = new javax.swing.JButton();
-        btnReset = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setResizable(false);
+        setUndecorated(true);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("KERUCUT");
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "INPUT", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
+        tLuaspermukaan.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        tLuaspermukaan.setForeground(new java.awt.Color(255, 255, 255));
+        tLuaspermukaan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tLuaspermukaan.setText("0");
+        jPanel1.add(tLuaspermukaan, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 340, 290, 40));
 
-        jLabel2.setText("Jari-Jari         :");
+        tVolume.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        tVolume.setForeground(new java.awt.Color(255, 255, 255));
+        tVolume.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tVolume.setText("0");
+        jPanel1.add(tVolume, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, 290, 40));
 
-        jLabel3.setText("Tinggi           :");
+        jButton1.setBackground(new java.awt.Color(36, 93, 196));
+        jButton1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("KEMBALI");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        jButton1.addActionListener(this::jButton1ActionPerformed);
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, 360, 60));
 
-        jLabel4.setText("Garis Pelukis :");
-
-        tJarijari.addActionListener(this::tJarijariActionPerformed);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tJarijari, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tTinggi, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tGaris, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(tJarijari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(tTinggi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(tGaris, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "OUTPUT", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel5.setText("Volume                :");
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel6.setText("Luas Permukaan :");
-
-        tVolume.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        tVolume.setText("jLabel7");
-
-        tLuaspermukaan.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        tLuaspermukaan.setText("jLabel8");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tVolume, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(tLuaspermukaan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(tVolume))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(tLuaspermukaan))
-                .addGap(43, 43, 43))
-        );
-
-        btnHitung.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnHitung.setBackground(new java.awt.Color(36, 93, 196));
+        btnHitung.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        btnHitung.setForeground(new java.awt.Color(255, 255, 255));
         btnHitung.setText("HITUNG");
         btnHitung.addActionListener(this::btnHitungActionPerformed);
+        jPanel1.add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 420, 150, 40));
 
-        btnReset.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnReset.setBackground(new java.awt.Color(36, 93, 196));
+        btnReset.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        btnReset.setForeground(new java.awt.Color(255, 255, 255));
         btnReset.setText("RESET");
         btnReset.addActionListener(this::btnResetActionPerformed);
+        jPanel1.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(682, 423, 160, 40));
+
+        tJarijari.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tJarijari.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tJarijari.addActionListener(this::tJarijariActionPerformed);
+        jPanel1.add(tJarijari, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 290, 40));
+
+        tTinggi.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tTinggi.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tTinggi.addActionListener(this::tTinggiActionPerformed);
+        jPanel1.add(tTinggi, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, 290, 40));
+
+        tGaris.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tGaris.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPanel1.add(tGaris, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 460, 290, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Icon/Background Kerucut.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 600));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(122, 122, 122)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(btnHitung)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnReset)
-                .addGap(30, 30, 30))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel1)
-                .addGap(30, 30, 30)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnHitung)
-                    .addComponent(btnReset))
-                .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
         // TODO add your handling code here:
         KerucutFarid kerucut = new KerucutFarid();
-        
+
         kerucut.setJariJari(Double.parseDouble(tJarijari.getText()));
         kerucut.setTinggi(Double.parseDouble(tTinggi.getText()));
         kerucut.setGarisPelukis(Double.parseDouble(tGaris.getText()));
-        
-            kerucut.volume();
-            kerucut.luasPermukaan();
-            
+
+        kerucut.volume();
+        kerucut.luasPermukaan();
+
         tVolume.setText(String.valueOf(kerucut.getVolume()));
         tLuaspermukaan.setText(String.valueOf(kerucut.getLuasPermukaan()));
     }//GEN-LAST:event_btnHitungActionPerformed
 
+    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
+        // TODO add your handling code here:
+        tJarijari.setText("");
+        tTinggi.setText("");
+        tGaris.setText("");
+        tVolume.setText("0");
+        tLuaspermukaan.setText("0");
+       
+    }//GEN-LAST:event_btnResetActionPerformed
+
+    private void tTinggiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tTinggiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tTinggiActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        new DashboardFrame().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     private void tJarijariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tJarijariActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tJarijariActionPerformed
-
-    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
-        // TODO add your handling code here:
-        reset();
-    }//GEN-LAST:event_btnResetActionPerformed
 
     /**
      * @param args the command line arguments
@@ -251,14 +186,9 @@ public class FrameKerucut extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnHitung;
     private javax.swing.JButton btnReset;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField tGaris;
     private javax.swing.JTextField tJarijari;
     private javax.swing.JLabel tLuaspermukaan;

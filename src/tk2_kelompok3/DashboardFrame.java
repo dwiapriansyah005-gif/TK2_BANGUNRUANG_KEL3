@@ -199,6 +199,11 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         btnKerucut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Icon/Forward Icon.png"))); // NOI18N
         btnKerucut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnKerucut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnKerucutMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -392,6 +397,12 @@ public class DashboardFrame extends javax.swing.JFrame {
        new FrameBola().setVisible(true);
         dispose();
     }//GEN-LAST:event_btnBolaMouseClicked
+
+    private void btnKerucutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKerucutMouseClicked
+        // TODO add your handling code here:
+        new FrameKerucut().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnKerucutMouseClicked
 
     /**
      * @param args the command line arguments
