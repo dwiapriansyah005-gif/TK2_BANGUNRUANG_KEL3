@@ -240,6 +240,11 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         btnBola.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Icon/Forward Icon.png"))); // NOI18N
         btnBola.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBola.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnBolaMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -381,6 +386,12 @@ public class DashboardFrame extends javax.swing.JFrame {
         new FrameLimassegiempat().setVisible(true);
         dispose();
     }//GEN-LAST:event_btnLimasMouseClicked
+
+    private void btnBolaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBolaMouseClicked
+        // TODO add your handling code here:
+       new FrameBola().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnBolaMouseClicked
 
     /**
      * @param args the command line arguments
