@@ -201,14 +201,17 @@ public class FrameKerucut extends javax.swing.JFrame {
 
     private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
         // TODO add your handling code here:
-        double jariJari = Double.parseDouble(tJarijari.getText());
-        double tinggi = Double.parseDouble(tTinggi.getText());
-        double garisPelukis = Double.parseDouble(tGaris.getText());
+        KerucutFarid kerucut = new KerucutFarid();
         
-        KerucutFarid kf = new KerucutFarid(jariJari, tinggi, garisPelukis);
+        kerucut.setJariJari(Double.parseDouble(tJarijari.getText()));
+        kerucut.setTinggi(Double.parseDouble(tTinggi.getText()));
+        kerucut.setGarisPelukis(Double.parseDouble(tGaris.getText()));
         
-        tVolume.setText(String.valueOf(kf.volume()));
-        tLuaspermukaan.setText(String.valueOf(kf.luasPermukaan()));
+            kerucut.volume();
+            kerucut.luasPermukaan();
+            
+        tVolume.setText(String.valueOf(kerucut.getVolume()));
+        tLuaspermukaan.setText(String.valueOf(kerucut.getLuasPermukaan()));
     }//GEN-LAST:event_btnHitungActionPerformed
 
     private void tJarijariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tJarijariActionPerformed
