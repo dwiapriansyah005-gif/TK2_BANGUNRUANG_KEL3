@@ -17,6 +17,15 @@ public class JframeLimassegiempatDwi extends javax.swing.JFrame {
      */
     public JframeLimassegiempatDwi() {
         initComponents();
+        
+        reset ();
+    }
+    void reset(){
+           tSisialas.setText(null);
+        tTinggilimas.setText(null);
+        tTinggisisi.setText(null);
+        tVolume.setText("0");
+        tLuas.setText("0");
     }
 
     /**
@@ -214,12 +223,7 @@ public class JframeLimassegiempatDwi extends javax.swing.JFrame {
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         // TODO add your handling code here:
-        tSisialas.setText(null);
-        tTinggilimas.setText(null);
-        tTinggisisi.setText(null);
-        tVolume.setText("0");
-        tLuas.setText("0");
-
+        reset();
     }//GEN-LAST:event_btnResetActionPerformed
 
     /**
