@@ -18,7 +18,14 @@ public class FrameKubusBetrin extends javax.swing.JFrame {
      */
     public FrameKubusBetrin() {
         initComponents();
+        reset();
     }
+    public void reset(){
+        tSisi.setText(null);
+        lLuasPermukaan.setText("0");
+        lVolume.setText("0");
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -33,12 +40,13 @@ public class FrameKubusBetrin extends javax.swing.JFrame {
         tSisi = new javax.swing.JTextField();
         lLuasPermukaan = new javax.swing.JLabel();
         lVolume = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnKembali = new javax.swing.JButton();
+        btnHitung = new javax.swing.JButton();
+        btnReset = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setMinimumSize(new java.awt.Dimension(910, 600));
@@ -47,6 +55,12 @@ public class FrameKubusBetrin extends javax.swing.JFrame {
 
         tSisi.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         tSisi.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tSisi.addActionListener(this::tSisiActionPerformed);
+        tSisi.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tSisiKeyReleased(evt);
+            }
+        });
         jPanel1.add(tSisi, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 290, 40));
 
         lLuasPermukaan.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
@@ -61,26 +75,26 @@ public class FrameKubusBetrin extends javax.swing.JFrame {
         lVolume.setText("0");
         jPanel1.add(lVolume, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, 140, 40));
 
-        jButton1.setBackground(java.awt.Color.red);
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Kembali");
-        jButton1.addActionListener(this::jButton1ActionPerformed);
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 490, 360, 40));
+        btnKembali.setBackground(new java.awt.Color(36, 93, 196));
+        btnKembali.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnKembali.setForeground(new java.awt.Color(255, 255, 255));
+        btnKembali.setText("Kembali");
+        btnKembali.addActionListener(this::btnKembaliActionPerformed);
+        jPanel1.add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 490, 360, 40));
 
-        jButton2.setBackground(new java.awt.Color(36, 93, 196));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Hitung");
-        jButton2.addActionListener(this::jButton2ActionPerformed);
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 430, 150, 40));
+        btnHitung.setBackground(new java.awt.Color(36, 93, 196));
+        btnHitung.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnHitung.setForeground(new java.awt.Color(255, 255, 255));
+        btnHitung.setText("Hitung");
+        btnHitung.addActionListener(this::btnHitungActionPerformed);
+        jPanel1.add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 430, 150, 40));
 
-        jButton3.setBackground(new java.awt.Color(36, 93, 196));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Reset");
-        jButton3.addActionListener(this::jButton3ActionPerformed);
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 430, 150, 40));
+        btnReset.setBackground(new java.awt.Color(36, 93, 196));
+        btnReset.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnReset.setForeground(new java.awt.Color(255, 255, 255));
+        btnReset.setText("Reset");
+        btnReset.addActionListener(this::btnResetActionPerformed);
+        jPanel1.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 430, 150, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Background Kubus.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -88,19 +102,40 @@ public class FrameKubusBetrin extends javax.swing.JFrame {
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        KubusBetrin kubus = new KubusBetrin();
+        kubus.setSisi(Double.parseDouble(tSisi.getText()));
+        
+        kubus.luasPermukaan();
+        kubus.volume();
+        
+        lLuasPermukaan.setText(String.valueOf(kubus.luasPermukaan()));
+        lVolume.setText(String.valueOf(kubus.volume()));
+    }//GEN-LAST:event_btnHitungActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnKembaliActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        reset();
+        tSisi.requestFocus();
+    }//GEN-LAST:event_btnResetActionPerformed
+
+    private void tSisiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tSisiActionPerformed
+        // TODO add your handling code here:
+        btnHitung.doClick();
+    }//GEN-LAST:event_tSisiActionPerformed
+
+    private void tSisiKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tSisiKeyReleased
+        // TODO add your handling code here:
+        btnHitung.doClick();
+    }//GEN-LAST:event_tSisiKeyReleased
 
     /**
      * @param args the command line arguments
@@ -128,9 +163,9 @@ public class FrameKubusBetrin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btnHitung;
+    private javax.swing.JButton btnKembali;
+    private javax.swing.JButton btnReset;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lLuasPermukaan;

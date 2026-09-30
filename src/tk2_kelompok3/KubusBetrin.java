@@ -1,9 +1,15 @@
 package tk2_kelompok3;
 public class KubusBetrin {
- //Atribut
+    //Atribut
     private double sisi;
     private double volume;
     private double luasPermukaan;
+
+    public KubusBetrin(double sisi) {
+        this.sisi = sisi;
+    }
+    public KubusBetrin(){
+    }
     
     // Setter & Getter 
     public void setSisi(double sisi) { this.sisi = sisi; }
