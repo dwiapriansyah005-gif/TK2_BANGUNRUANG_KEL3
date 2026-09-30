@@ -22,8 +22,8 @@ public class FrameTabungNatasza extends javax.swing.JFrame {
     public void reset(){
        tJariJari.setText(null);
        tTinggi.setText(null);
-       tLuasPermukaan.setText(null);
-       tVolume.setText(null);
+       tLuasPermukaan.setText("0");
+       tVolume.setText("0");
         
     }
 
@@ -91,7 +91,7 @@ public class FrameTabungNatasza extends javax.swing.JFrame {
         btnHitung.addActionListener(this::btnHitungActionPerformed);
         jPanel1.add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 440, 130, 40));
 
-        btnKembali.setBackground(new java.awt.Color(255, 102, 102));
+        btnKembali.setBackground(new java.awt.Color(36, 93, 196));
         btnKembali.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnKembali.setForeground(new java.awt.Color(255, 255, 255));
         btnKembali.setText("Kembali");
@@ -108,6 +108,8 @@ public class FrameTabungNatasza extends javax.swing.JFrame {
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         // TODO add your handling code here:
         reset();
+        tJariJari.requestFocus();
+        tTinggi.requestFocus();
     }//GEN-LAST:event_btnResetActionPerformed
 
     private void tJariJariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tJariJariActionPerformed
