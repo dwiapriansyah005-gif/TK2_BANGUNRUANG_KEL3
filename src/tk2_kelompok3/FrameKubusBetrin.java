@@ -87,16 +87,16 @@ public class FrameKubusBetrin extends javax.swing.JFrame {
         btnHitung.setForeground(new java.awt.Color(255, 255, 255));
         btnHitung.setText("Hitung");
         btnHitung.addActionListener(this::btnHitungActionPerformed);
-        jPanel1.add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 430, 150, 40));
+        jPanel1.add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 430, 170, 40));
 
         btnReset.setBackground(new java.awt.Color(36, 93, 196));
         btnReset.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnReset.setForeground(new java.awt.Color(255, 255, 255));
         btnReset.setText("Reset");
         btnReset.addActionListener(this::btnResetActionPerformed);
-        jPanel1.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 430, 150, 40));
+        jPanel1.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 430, 170, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Background Kubus.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Icon/Background Kubus.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -119,6 +119,8 @@ public class FrameKubusBetrin extends javax.swing.JFrame {
 
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
         // TODO add your handling code here:
+        new DashboardFrame().setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnKembaliActionPerformed
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
