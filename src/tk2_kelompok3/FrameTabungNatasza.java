@@ -82,22 +82,24 @@ public class FrameTabungNatasza extends javax.swing.JFrame {
         btnReset.setForeground(new java.awt.Color(255, 255, 255));
         btnReset.setText("Reset");
         btnReset.addActionListener(this::btnResetActionPerformed);
-        jPanel1.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 440, 130, 40));
+        jPanel1.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 440, 170, 40));
 
         btnHitung.setBackground(new java.awt.Color(36, 93, 196));
         btnHitung.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnHitung.setForeground(new java.awt.Color(255, 255, 255));
         btnHitung.setText("Hitung");
         btnHitung.addActionListener(this::btnHitungActionPerformed);
-        jPanel1.add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 440, 130, 40));
+        jPanel1.add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 440, 170, 40));
 
         btnKembali.setBackground(new java.awt.Color(36, 93, 196));
         btnKembali.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnKembali.setForeground(new java.awt.Color(255, 255, 255));
         btnKembali.setText("Kembali");
+        btnKembali.addActionListener(this::btnKembaliActionPerformed);
         jPanel1.add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 500, 350, 50));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Background Tabung (1).png"))); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Icon/Background Tabung (1).png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -132,6 +134,12 @@ public class FrameTabungNatasza extends javax.swing.JFrame {
         tLuasPermukaan.setText(String.valueOf(tabung.luasPermukaan()));
         tVolume.setText(String.valueOf(tabung.volume()));
     }//GEN-LAST:event_btnHitungActionPerformed
+
+    private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
+        // TODO add your handling code here:
+        new DashboardFrame().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnKembaliActionPerformed
 
     /**
      * @param args the command line arguments

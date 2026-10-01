@@ -342,6 +342,11 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         btnTabung.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Icon/Forward Icon.png"))); // NOI18N
         btnTabung.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnTabung.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnTabungMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -414,6 +419,12 @@ public class DashboardFrame extends javax.swing.JFrame {
         new FrameKubusBetrin().setVisible(true);
         dispose();
     }//GEN-LAST:event_btnKubusMouseClicked
+
+    private void btnTabungMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTabungMouseClicked
+        // TODO add your handling code here:
+        new FrameTabungNatasza().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnTabungMouseClicked
 
     /**
      * @param args the command line arguments
