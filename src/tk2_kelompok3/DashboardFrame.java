@@ -158,6 +158,11 @@ public class DashboardFrame extends javax.swing.JFrame {
 
         btnKubus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Icon/Forward Icon.png"))); // NOI18N
         btnKubus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnKubus.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnKubusMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -403,6 +408,12 @@ public class DashboardFrame extends javax.swing.JFrame {
         new FrameKerucut().setVisible(true);
         dispose();
     }//GEN-LAST:event_btnKerucutMouseClicked
+
+    private void btnKubusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnKubusMouseClicked
+        // TODO add your handling code here:
+        new FrameKubusBetrin().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnKubusMouseClicked
 
     /**
      * @param args the command line arguments
