@@ -87,7 +87,6 @@ public class MainBagunRuang {
         System.out.println("");
         
         // 5. Natasza Tabung
-                // Tabung
         TabungNatasza tabung = new TabungNatasza(7, 10);
 
         System.out.println("------Tabung------");
@@ -103,7 +102,6 @@ public class MainBagunRuang {
         System.out.println("");
         
         // 6.Betrin Kubus
-                // Kubus
         KubusBetrin kubus = new KubusBetrin(14);
 
         System.out.println("------Kubus------");
