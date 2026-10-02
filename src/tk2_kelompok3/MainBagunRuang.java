@@ -15,7 +15,7 @@ public class MainBagunRuang {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        //Dwi Limas Segi Empat
+        // 1.Dwi Limas Segi Empat
         DwiLimassegiempat limas = new DwiLimassegiempat(15, 10, 5);
 
         limas.volume();
@@ -33,7 +33,7 @@ public class MainBagunRuang {
         System.out.printf("Luas Permukaan = %.2f%n", limas.getLuasPermukaan());
         System.out.println("");
 
-        //Sifaul Bola
+        // 2.Sifaul Bola
         BolaFaul bola = new BolaFaul(7);
 
         bola.volume();
@@ -50,7 +50,7 @@ public class MainBagunRuang {
         System.out.printf("Luas Permukaan = %.2f%n", bola.getLuasPermukaan());
         System.out.println("");
 
-        //Farid Kerucut
+        // 3.Farid Kerucut
         KerucutFarid kerucut = new KerucutFarid(7, 10, 12);
 
         kerucut.volume();
@@ -68,7 +68,7 @@ public class MainBagunRuang {
         System.out.printf("Luas Permukaan = %.2f%n", kerucut.getLuasPermukaan());
         System.out.println("");
 
-        //Bagas Balok
+        // 4.Bagas Balok
         BalokBagas balok = new BalokBagas(8, 4, 3);
 
         balok.volume();
@@ -84,6 +84,36 @@ public class MainBagunRuang {
 
         System.out.printf("Volume = %.2f%n", balok.getVolume());
         System.out.printf("Luas Permukaan = %.2f%n", balok.getLuasPermukaan());
+        System.out.println("");
+        
+        // 5. Natasza Tabung
+                // Tabung
+        TabungNatasza tabung = new TabungNatasza(7, 10);
+
+        System.out.println("------Tabung------");
+        System.out.println("Rumus Volume (V) = phi * r * r * t");
+        System.out.println("Rumus Luas Permukaan (L) = 2 * phi * r * (r + t)");
+        System.out.println("Diketahui : r = " + (int) tabung.getJariJari());
+        System.out.println("Diketahui : t = " + (int) tabung.getTinggi());
+        System.out.println("Diketahui : phi = " + String.format("%.2f", Math.PI));
+        System.out.println("Ditanya : V, L?");
+
+        System.out.printf("Volume = %.2f%n", tabung.volume());
+        System.out.printf("Luas Permukaan = %.2f%n", tabung.luasPermukaan());
+        System.out.println("");
+        
+        // 6.Betrin Kubus
+                // Kubus
+        KubusBetrin kubus = new KubusBetrin(14);
+
+        System.out.println("------Kubus------");
+        System.out.println("Rumus Volume (V) = s * s * s");
+        System.out.println("Rumus Luas Permukaan (L) = 6 * s * s");
+        System.out.println("Diketahui : s = " + (int) kubus.getSisi());
+        System.out.println("Ditanya : V, L?");
+
+        System.out.printf("Volume = %.2f%n", kubus.volume());
+        System.out.printf("Luas Permukaan = %.2f%n", kubus.luasPermukaan());
         System.out.println("");
     }
 

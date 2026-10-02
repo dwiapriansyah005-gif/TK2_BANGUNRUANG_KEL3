@@ -13,6 +13,18 @@ public class TabungNatasza {
         return jariJari;
     }
 
+    public TabungNatasza() {
+        
+    }
+
+    public TabungNatasza(double jariJari, double tinggi) {
+        this.jariJari = jariJari;
+        this.tinggi = tinggi;
+    }
+    
+    
+    
+
     public void setJariJari(double jariJari) {
         this.jariJari = jariJari;
     }
