@@ -1,4 +1,7 @@
-package tk2_kelompok3;
+package model;
+
+import tk2_kelompok3.*;
+
 public class TabungNatasza {
    private double jariJari;
     private double tinggi;

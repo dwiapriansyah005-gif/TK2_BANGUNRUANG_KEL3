@@ -1,4 +1,6 @@
-package tk2_kelompok3;
+package model;
+
+import tk2_kelompok3.*;
 
 
 public class BolaFaul {

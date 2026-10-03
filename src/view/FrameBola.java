@@ -2,20 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package tk2_kelompok3;
+package view;
+
+import model.*;
 
 /**
  *
- * @author ACER
+ * @author Lenovo
  */
-public class FrameKerucut extends javax.swing.JFrame {
+public class FrameBola extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FrameKerucut.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FrameBola.class.getName());
 
     /**
-     * Creates new form FrameKerucut
+     * Creates new form FrameBola
      */
-    public FrameKerucut() {
+    public FrameBola() {
         initComponents();
     }
 
@@ -29,32 +31,18 @@ public class FrameKerucut extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        tLuaspermukaan = new javax.swing.JLabel();
-        tVolume = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         btnHitung = new javax.swing.JButton();
         btnReset = new javax.swing.JButton();
-        tJarijari = new javax.swing.JTextField();
-        tTinggi = new javax.swing.JTextField();
-        tGaris = new javax.swing.JTextField();
+        tVolume = new javax.swing.JLabel();
+        tLuasPermukaan = new javax.swing.JLabel();
+        tJariJari = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        tLuaspermukaan.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        tLuaspermukaan.setForeground(new java.awt.Color(255, 255, 255));
-        tLuaspermukaan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        tLuaspermukaan.setText("0");
-        jPanel1.add(tLuaspermukaan, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 340, 290, 40));
-
-        tVolume.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        tVolume.setForeground(new java.awt.Color(255, 255, 255));
-        tVolume.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        tVolume.setText("0");
-        jPanel1.add(tVolume, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, 290, 40));
 
         jButton1.setBackground(new java.awt.Color(36, 93, 196));
         jButton1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
@@ -69,34 +57,37 @@ public class FrameKerucut extends javax.swing.JFrame {
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, 360, 60));
 
         btnHitung.setBackground(new java.awt.Color(36, 93, 196));
-        btnHitung.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        btnHitung.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         btnHitung.setForeground(new java.awt.Color(255, 255, 255));
         btnHitung.setText("HITUNG");
         btnHitung.addActionListener(this::btnHitungActionPerformed);
-        jPanel1.add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 420, 150, 40));
+        jPanel1.add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 420, 170, 50));
 
         btnReset.setBackground(new java.awt.Color(36, 93, 196));
-        btnReset.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        btnReset.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         btnReset.setForeground(new java.awt.Color(255, 255, 255));
         btnReset.setText("RESET");
         btnReset.addActionListener(this::btnResetActionPerformed);
-        jPanel1.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(682, 423, 160, 40));
+        jPanel1.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(682, 420, 170, 50));
 
-        tJarijari.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        tJarijari.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tJarijari.addActionListener(this::tJarijariActionPerformed);
-        jPanel1.add(tJarijari, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 290, 40));
+        tVolume.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        tVolume.setForeground(new java.awt.Color(255, 255, 255));
+        tVolume.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tVolume.setText("0");
+        jPanel1.add(tVolume, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 230, 210, 60));
 
-        tTinggi.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        tTinggi.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tTinggi.addActionListener(this::tTinggiActionPerformed);
-        jPanel1.add(tTinggi, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, 290, 40));
+        tLuasPermukaan.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        tLuasPermukaan.setForeground(new java.awt.Color(255, 255, 255));
+        tLuasPermukaan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tLuasPermukaan.setText("0");
+        jPanel1.add(tLuasPermukaan, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 210, 60));
 
-        tGaris.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        tGaris.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel1.add(tGaris, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 460, 290, 40));
+        tJariJari.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        tJariJari.setForeground(new java.awt.Color(10, 37, 86));
+        tJariJari.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPanel1.add(tJariJari, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 300, 70));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Icon/Background Kerucut.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Icon/Background Bola.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 600));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -116,32 +107,32 @@ public class FrameKerucut extends javax.swing.JFrame {
 
     private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
         // TODO add your handling code here:
-        KerucutFarid kerucut = new KerucutFarid();
+        try {
+            // Nama: Mohamad Syifa'ul Amal - 202557201025
+            BolaFaul bola = new BolaFaul();
 
-        kerucut.setJariJari(Double.parseDouble(tJarijari.getText()));
-        kerucut.setTinggi(Double.parseDouble(tTinggi.getText()));
-        kerucut.setGarisPelukis(Double.parseDouble(tGaris.getText()));
+            double r = Double.parseDouble(tJariJari.getText());
+            bola.setJariJari(r);
 
-        kerucut.volume();
-        kerucut.luasPermukaan();
+            bola.volume();
+            bola.luasPermukaan();
 
-        tVolume.setText(String.valueOf(kerucut.getVolume()));
-        tLuaspermukaan.setText(String.valueOf(kerucut.getLuasPermukaan()));
+            tVolume.setText(String.format("%.2f", bola.getVolume()));
+            tLuasPermukaan.setText(String.format("%.2f", bola.getLuasPermukaan()));
+
+        } catch (NumberFormatException e) {
+            javax.swing.JOptionPane.showMessageDialog(null, "Input jari-jari harus angka!");
+        }
     }//GEN-LAST:event_btnHitungActionPerformed
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         // TODO add your handling code here:
-        tJarijari.setText("");
-        tTinggi.setText("");
-        tGaris.setText("");
-        tVolume.setText("0");
-        tLuaspermukaan.setText("0");
-       
-    }//GEN-LAST:event_btnResetActionPerformed
+    tJariJari.setText("");
+    tVolume.setText("0");
+    tLuasPermukaan.setText("0");
+    tJariJari.requestFocus();
 
-    private void tTinggiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tTinggiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tTinggiActionPerformed
+    }//GEN-LAST:event_btnResetActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
@@ -151,12 +142,9 @@ public class FrameKerucut extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
+        new DashboardFrame().setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void tJarijariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tJarijariActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tJarijariActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,7 +168,7 @@ public class FrameKerucut extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new FrameKerucut().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new FrameBola().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -189,10 +177,8 @@ public class FrameKerucut extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField tGaris;
-    private javax.swing.JTextField tJarijari;
-    private javax.swing.JLabel tLuaspermukaan;
-    private javax.swing.JTextField tTinggi;
+    private javax.swing.JTextField tJariJari;
+    private javax.swing.JLabel tLuasPermukaan;
     private javax.swing.JLabel tVolume;
     // End of variables declaration//GEN-END:variables
 }
