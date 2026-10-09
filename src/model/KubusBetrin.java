@@ -1,7 +1,5 @@
 package model;
 
-import tk2_kelompok3.*;
-
 public class KubusBetrin {
     //Atribut
     private double sisi;

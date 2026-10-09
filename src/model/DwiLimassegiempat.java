@@ -4,8 +4,6 @@
  */
 package model;
 
-import tk2_kelompok3.*;
-
 /**
  *
  * @author macbookairm12020

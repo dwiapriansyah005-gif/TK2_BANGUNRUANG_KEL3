@@ -34,8 +34,8 @@ public class DashboardFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         btnExit = new javax.swing.JLabel();
-        tnama = new javax.swing.JLabel();
         tlogout = new javax.swing.JLabel();
+        tnama = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -78,10 +78,6 @@ public class DashboardFrame extends javax.swing.JFrame {
             }
         });
 
-        tnama.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        tnama.setForeground(new java.awt.Color(255, 255, 255));
-        tnama.setText("#");
-
         tlogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Icon/icons8-home-30.png"))); // NOI18N
         tlogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tlogout.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -89,6 +85,10 @@ public class DashboardFrame extends javax.swing.JFrame {
                 tlogoutMouseClicked(evt);
             }
         });
+
+        tnama.setFont(new java.awt.Font("Helvetica Neue", 1, 16)); // NOI18N
+        tnama.setForeground(new java.awt.Color(255, 255, 255));
+        tnama.setText("jLabel14");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -98,7 +98,7 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(tnama, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tnama, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(tlogout)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -112,10 +112,10 @@ public class DashboardFrame extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnExit)
-                    .addComponent(tnama, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tlogout, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(tlogout, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(tnama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addContainerGap())
