@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package view;
-
+import model.user;
 /**
  *
  * @author user
@@ -205,9 +205,16 @@ public class LoginFrame extends javax.swing.JFrame {
 
     private void btnMasukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasukActionPerformed
         // TODO add your handling code here:
+      
+    String username = tUsername.getText().trim();
+    String password = new String(tPassword.getPassword());
+
+    if (user.login(username, password)) {
         DashboardFrame dashboard = new DashboardFrame();
         dashboard.setVisible(true);
+
         this.dispose();
+    }
     }//GEN-LAST:event_btnMasukActionPerformed
 
     /**

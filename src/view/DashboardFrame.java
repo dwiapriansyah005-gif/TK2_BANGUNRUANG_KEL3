@@ -4,7 +4,7 @@
  */
 package view;
 
-import tk2_kelompok3.*;
+import model.*;
 
 /**
  *
@@ -19,6 +19,7 @@ public class DashboardFrame extends javax.swing.JFrame {
      */
     public DashboardFrame() {
         initComponents();
+        tnama.setText( user.namaUser);
     }
 
     /**
@@ -33,7 +34,8 @@ public class DashboardFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         btnExit = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        tnama = new javax.swing.JLabel();
+        tlogout = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -76,9 +78,17 @@ public class DashboardFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("#");
+        tnama.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        tnama.setForeground(new java.awt.Color(255, 255, 255));
+        tnama.setText("#");
+
+        tlogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Icon/icons8-home-30.png"))); // NOI18N
+        tlogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tlogout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tlogoutMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -88,8 +98,10 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tnama, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tlogout)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnExit))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
@@ -102,7 +114,8 @@ public class DashboardFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnExit)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tnama, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tlogout, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addContainerGap())
@@ -437,6 +450,16 @@ public class DashboardFrame extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnTabungMouseClicked
 
+    private void tlogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tlogoutMouseClicked
+        // TODO add your handling code here:
+          user.logout();
+
+    LoginFrame login = new LoginFrame();
+    login.setVisible(true);
+
+    this.dispose();
+    }//GEN-LAST:event_tlogoutMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -475,7 +498,6 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -492,5 +514,7 @@ public class DashboardFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JLabel tlogout;
+    private javax.swing.JLabel tnama;
     // End of variables declaration//GEN-END:variables
 }

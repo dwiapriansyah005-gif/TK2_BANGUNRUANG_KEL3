@@ -20,6 +20,7 @@ public class FrameLimassegiempat extends javax.swing.JFrame {
     //dwi
     public FrameLimassegiempat() {
         initComponents();
+        tNama.setText("Selamat Datang, " + user.namaUser + " Di Frame Limas Segiempat");
         
         reset ();
     }
@@ -40,6 +41,7 @@ public class FrameLimassegiempat extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        tNama = new javax.swing.JLabel();
         tLuasPermukaan = new javax.swing.JLabel();
         tVolume = new javax.swing.JLabel();
         bHitung = new javax.swing.JButton();
@@ -54,6 +56,11 @@ public class FrameLimassegiempat extends javax.swing.JFrame {
         setUndecorated(true);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tNama.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        tNama.setForeground(new java.awt.Color(255, 255, 255));
+        tNama.setText("jLabel1");
+        jPanel1.add(tNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 450, 30));
 
         tLuasPermukaan.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         tLuasPermukaan.setForeground(new java.awt.Color(255, 255, 255));
@@ -99,8 +106,10 @@ public class FrameLimassegiempat extends javax.swing.JFrame {
         jPanel1.add(tTinggilimas, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 290, 40));
         jPanel1.add(tTinggisisi, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 460, 290, 40));
 
+        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Icon/Background Limas.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, -3, 910, 600));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-8, -3, 910, 600));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -183,6 +192,7 @@ public class FrameLimassegiempat extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel tLuasPermukaan;
+    private javax.swing.JLabel tNama;
     private javax.swing.JTextField tSisialas;
     private javax.swing.JTextField tTinggilimas;
     private javax.swing.JTextField tTinggisisi;
