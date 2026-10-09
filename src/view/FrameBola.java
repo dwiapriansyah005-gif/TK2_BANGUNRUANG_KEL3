@@ -19,6 +19,7 @@ public class FrameBola extends javax.swing.JFrame {
      */
     public FrameBola() {
         initComponents();
+        tNama.setText("Selamat Datang, " + user.namaUser + " Di Frame Bola");
     }
 
     /**
@@ -31,6 +32,7 @@ public class FrameBola extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        tNama = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         btnHitung = new javax.swing.JButton();
         btnReset = new javax.swing.JButton();
@@ -43,6 +45,20 @@ public class FrameBola extends javax.swing.JFrame {
         setUndecorated(true);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tNama.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tNama.setForeground(new java.awt.Color(255, 255, 255));
+        tNama.setText("jLabel");
+        tNama.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                tNamaAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        jPanel1.add(tNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 410, 40));
 
         jButton1.setBackground(new java.awt.Color(36, 93, 196));
         jButton1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
@@ -87,6 +103,8 @@ public class FrameBola extends javax.swing.JFrame {
         tJariJari.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel1.add(tJariJari, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 300, 70));
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tk2_kelompok3/Icon/Background Bola.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 600));
 
@@ -146,6 +164,10 @@ public class FrameBola extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void tNamaAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_tNamaAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tNamaAncestorAdded
+
     /**
      * @param args the command line arguments
      */
@@ -179,6 +201,7 @@ public class FrameBola extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField tJariJari;
     private javax.swing.JLabel tLuasPermukaan;
+    private javax.swing.JLabel tNama;
     private javax.swing.JLabel tVolume;
     // End of variables declaration//GEN-END:variables
 }

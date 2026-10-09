@@ -19,6 +19,7 @@ public class FrameKerucut extends javax.swing.JFrame {
      */
     public FrameKerucut() {
         initComponents();
+        tNama.setText("Selamat Datang, " + user.namaUser + " Di Frame Kerucut");
     }
 
     /**
@@ -31,6 +32,7 @@ public class FrameKerucut extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        tNama = new javax.swing.JLabel();
         tLuaspermukaan = new javax.swing.JLabel();
         tVolume = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -45,6 +47,11 @@ public class FrameKerucut extends javax.swing.JFrame {
         setUndecorated(true);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tNama.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tNama.setForeground(new java.awt.Color(255, 255, 255));
+        tNama.setText("jLabel2");
+        jPanel1.add(tNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 400, 40));
 
         tLuaspermukaan.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         tLuaspermukaan.setForeground(new java.awt.Color(255, 255, 255));
@@ -194,6 +201,7 @@ public class FrameKerucut extends javax.swing.JFrame {
     private javax.swing.JTextField tGaris;
     private javax.swing.JTextField tJarijari;
     private javax.swing.JLabel tLuaspermukaan;
+    private javax.swing.JLabel tNama;
     private javax.swing.JTextField tTinggi;
     private javax.swing.JLabel tVolume;
     // End of variables declaration//GEN-END:variables

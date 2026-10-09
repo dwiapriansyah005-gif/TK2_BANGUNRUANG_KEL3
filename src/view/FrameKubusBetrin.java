@@ -20,6 +20,7 @@ public class FrameKubusBetrin extends javax.swing.JFrame {
      */
     public FrameKubusBetrin() {
         initComponents();
+        tNama.setText("Selamat Datang, " + user.namaUser + " Di Frame Kubus");
         reset();
     }
     public void reset(){
@@ -39,6 +40,7 @@ public class FrameKubusBetrin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        tNama = new javax.swing.JLabel();
         tSisi = new javax.swing.JTextField();
         lLuasPermukaan = new javax.swing.JLabel();
         lVolume = new javax.swing.JLabel();
@@ -54,6 +56,11 @@ public class FrameKubusBetrin extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(910, 600));
         jPanel1.setPreferredSize(new java.awt.Dimension(910, 600));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tNama.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tNama.setForeground(new java.awt.Color(255, 255, 255));
+        tNama.setText("jLabel2");
+        jPanel1.add(tNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 400, 40));
 
         tSisi.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         tSisi.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -174,6 +181,7 @@ public class FrameKubusBetrin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lLuasPermukaan;
     private javax.swing.JLabel lVolume;
+    private javax.swing.JLabel tNama;
     private javax.swing.JTextField tSisi;
     // End of variables declaration//GEN-END:variables
 }

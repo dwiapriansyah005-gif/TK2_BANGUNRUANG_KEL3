@@ -19,6 +19,7 @@ public class FrameTabungNatasza extends javax.swing.JFrame {
      */
     public FrameTabungNatasza() {
         initComponents();
+        tNama.setText("Selamat Datang, " + user.namaUser + " Di Frame Tabung");
         reset();
     }
     public void reset(){
@@ -39,6 +40,7 @@ public class FrameTabungNatasza extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        tNama = new javax.swing.JLabel();
         tTinggi = new javax.swing.JTextField();
         tJariJari = new javax.swing.JTextField();
         tVolume = new javax.swing.JLabel();
@@ -57,6 +59,11 @@ public class FrameTabungNatasza extends javax.swing.JFrame {
         jPanel1.setName(""); // NOI18N
         jPanel1.setPreferredSize(new java.awt.Dimension(910, 600));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tNama.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tNama.setForeground(new java.awt.Color(255, 255, 255));
+        tNama.setText("jLabel2");
+        jPanel1.add(tNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 400, 40));
 
         tTinggi.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         tTinggi.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -178,6 +185,7 @@ public class FrameTabungNatasza extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField tJariJari;
     private javax.swing.JLabel tLuasPermukaan;
+    private javax.swing.JLabel tNama;
     private javax.swing.JTextField tTinggi;
     private javax.swing.JLabel tVolume;
     // End of variables declaration//GEN-END:variables

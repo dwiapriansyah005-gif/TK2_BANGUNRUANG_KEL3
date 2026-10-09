@@ -20,6 +20,7 @@ public class FrameBalok extends javax.swing.JFrame {
      */
     public FrameBalok() {
         initComponents();
+        tNama.setText("Selamat Datang, " + user.namaUser + " Di Frame Balok");
     }
 
     /**
@@ -32,6 +33,7 @@ public class FrameBalok extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        tNama = new javax.swing.JLabel();
         tVolume = new javax.swing.JLabel();
         tLuasPermukaan = new javax.swing.JLabel();
         bHitung = new javax.swing.JButton();
@@ -47,6 +49,11 @@ public class FrameBalok extends javax.swing.JFrame {
         setUndecorated(true);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tNama.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tNama.setForeground(new java.awt.Color(255, 255, 255));
+        tNama.setText("jLabel2");
+        jPanel1.add(tNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 390, 40));
 
         tVolume.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         tVolume.setForeground(new java.awt.Color(255, 255, 255));
@@ -85,7 +92,6 @@ public class FrameBalok extends javax.swing.JFrame {
         bReset.addActionListener(this::bResetActionPerformed);
         jPanel1.add(bReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 420, 180, 50));
 
-        tLebar.setBackground(new java.awt.Color(255, 255, 255));
         tLebar.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         tLebar.setForeground(new java.awt.Color(10, 37, 86));
         tLebar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -93,7 +99,6 @@ public class FrameBalok extends javax.swing.JFrame {
         tLebar.addActionListener(this::tLebarActionPerformed);
         jPanel1.add(tLebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, 300, 60));
 
-        tPanjang.setBackground(new java.awt.Color(255, 255, 255));
         tPanjang.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         tPanjang.setForeground(new java.awt.Color(10, 37, 86));
         tPanjang.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -101,7 +106,6 @@ public class FrameBalok extends javax.swing.JFrame {
         tPanjang.addActionListener(this::tPanjangActionPerformed);
         jPanel1.add(tPanjang, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 300, 60));
 
-        tTinggi.setBackground(new java.awt.Color(255, 255, 255));
         tTinggi.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         tTinggi.setForeground(new java.awt.Color(10, 37, 86));
         tTinggi.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -211,6 +215,7 @@ public class FrameBalok extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField tLebar;
     private javax.swing.JLabel tLuasPermukaan;
+    private javax.swing.JLabel tNama;
     private javax.swing.JTextField tPanjang;
     private javax.swing.JTextField tTinggi;
     private javax.swing.JLabel tVolume;
