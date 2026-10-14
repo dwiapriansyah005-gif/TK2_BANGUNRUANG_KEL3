@@ -57,7 +57,7 @@ public class MainBagunRuang {
         KerucutFarid kerucut = new KerucutFarid(7, 10, 12);
 
         kerucut.volume();
-        kerucut.luasPermukaan();
+        kerucut.LuasPermukaaan();
 
         System.out.println("------Kerucut------");
         System.out.println("Rumus Volume (V) = 1/3 * phi * r * r * t");
