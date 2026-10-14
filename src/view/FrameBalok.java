@@ -34,8 +34,8 @@ public class FrameBalok extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         tNama = new javax.swing.JLabel();
-        tVolume = new javax.swing.JLabel();
         tLuasPermukaan = new javax.swing.JLabel();
+        tVolume = new javax.swing.JLabel();
         bHitung = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         bReset = new javax.swing.JButton();
@@ -55,17 +55,17 @@ public class FrameBalok extends javax.swing.JFrame {
         tNama.setText("jLabel2");
         jPanel1.add(tNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 390, 40));
 
-        tVolume.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
-        tVolume.setForeground(new java.awt.Color(255, 255, 255));
-        tVolume.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        tVolume.setText("0");
-        jPanel1.add(tVolume, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 200, -1));
-
         tLuasPermukaan.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         tLuasPermukaan.setForeground(new java.awt.Color(255, 255, 255));
         tLuasPermukaan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tLuasPermukaan.setText("0");
-        jPanel1.add(tLuasPermukaan, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 200, -1));
+        jPanel1.add(tLuasPermukaan, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 200, -1));
+
+        tVolume.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        tVolume.setForeground(new java.awt.Color(255, 255, 255));
+        tVolume.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tVolume.setText("0");
+        jPanel1.add(tVolume, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 200, -1));
 
         bHitung.setBackground(new java.awt.Color(36, 93, 196));
         bHitung.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
@@ -165,8 +165,8 @@ public class FrameBalok extends javax.swing.JFrame {
         tPanjang.setText(null);
         tLebar.setText(null);
         tTinggi.setText(null);
-        tVolume.setText("0");
         tLuasPermukaan.setText("0");
+        tVolume.setText("0");
         tPanjang.requestFocus();
     }//GEN-LAST:event_bResetActionPerformed
 

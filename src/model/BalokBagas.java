@@ -1,20 +1,17 @@
-
 package model;
 
-
-public class BalokBagas {
+public class BalokBagas extends BangunRuang {
 
     private double panjang;
     private double lebar;
     private double tinggi;
-    private double Volume;
-    private double LuasPermukaan;
 
     public BalokBagas() {
-
+        super();
     }
 
     public BalokBagas(double panjang, double lebar, double tinggi) {
+        super();
         this.panjang = panjang;
         this.lebar = lebar;
         this.tinggi = tinggi;
@@ -44,20 +41,14 @@ public class BalokBagas {
         this.tinggi = tinggi;
     }
 
+    @Override
     public void volume() {
         Volume = panjang * lebar * tinggi;
     }
 
+    @Override
     public void LuasPermukaaan() {
         LuasPermukaan = 2 * ((panjang * lebar) + (panjang * tinggi) + (lebar * tinggi));
-    }
 
-    public double getVolume() {
-        return Volume;
     }
-
-    public double getLuasPermukaan() {
-        return LuasPermukaan;
-    }
-
 }
