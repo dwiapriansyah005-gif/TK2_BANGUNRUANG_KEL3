@@ -133,7 +133,7 @@ public class FrameBola extends javax.swing.JFrame {
             bola.setJariJari(r);
 
             bola.volume();
-            bola.luasPermukaan();
+            bola.LuasPermukaaan();
 
             tVolume.setText(String.format("%.2f", bola.getVolume()));
             tLuasPermukaan.setText(String.format("%.2f", bola.getLuasPermukaan()));

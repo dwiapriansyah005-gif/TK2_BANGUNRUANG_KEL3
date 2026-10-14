@@ -40,7 +40,7 @@ public class MainBagunRuang {
         BolaFaul bola = new BolaFaul(7);
 
         bola.volume();
-        bola.luasPermukaan();
+        bola.LuasPermukaaan();
 
         System.out.println("------Bola------");
         System.out.println("Rumus Volume (V) = 4/3 * phi * r * r * r");
@@ -52,7 +52,7 @@ public class MainBagunRuang {
         System.out.printf("Volume = %.2f%n", bola.getVolume());
         System.out.printf("Luas Permukaan = %.2f%n", bola.getLuasPermukaan());
         System.out.println("");
-
+        
         // 3.Farid Kerucut
         KerucutFarid kerucut = new KerucutFarid(7, 10, 12);
 
