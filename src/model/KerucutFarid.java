@@ -1,50 +1,68 @@
 package model;
 
-public class KerucutFarid {
+public class KerucutFarid extends BangunRuang{
     
     // Atribut
-    private double jariJari, tinggi, garisPelukis, volume, luasPermukaan;
-
-    // Construcktor
-    
-    public KerucutFarid() {
-    
-    }
+    private double jariJari;
+    private double tinggi;
+    private double garisPelukis;
 
     public KerucutFarid(double jariJari, double tinggi, double garisPelukis) {
+        super();
         this.jariJari = jariJari;
         this.tinggi = tinggi;
-        this.garisPelukis = garisPelukis;
+        this.garisPelukis = Math.sqrt(
+                (jariJari * jariJari) + (tinggi * tinggi)
+        );
     }
-    
-    
+
+    public KerucutFarid() {
+        super();
+    }
 
     // Setter & Getter
-    public void setJariJari(double r) { this.jariJari = r; }
-    public double getJariJari() { return jariJari; }
+    public void setJariJari(double jariJari) {
+        this.jariJari = jariJari;
+        hitungGarisPelukis();
+    }
 
-    public void setTinggi(double t) { this.tinggi = t; }
-    public double getTinggi() { return tinggi; }
+    public double getJariJari() {
+        return jariJari;
+    }
 
-    public void setGarisPelukis(double s) { this.garisPelukis = s; }
-    public double getGarisPelukis() { return garisPelukis; }
+    public void setTinggi(double tinggi) {
+        this.tinggi = tinggi;
+        hitungGarisPelukis();
+    }
 
-    // Method hitung (return)
+    public double getTinggi() {
+        return tinggi;
+    }
+
+    public void setGarisPelukis(double garisPelukis) {
+        this.garisPelukis = garisPelukis;
+    }
+
+    public double getGarisPelukis() {
+        return garisPelukis;
+    }
+
+    private void hitungGarisPelukis() {
+        garisPelukis = Math.sqrt(
+                (jariJari * jariJari) + (tinggi * tinggi)
+        );
+    }
+
+    // Method hitung
+    @Override
     public void volume() {
-       volume = (1.0/3.0) * Math.PI * jariJari * jariJari * tinggi;
-    }
-    public void luasPermukaan() {
-        luasPermukaan= Math.PI * jariJari * (jariJari + garisPelukis);
+        Volume = (1.0 / 3.0) * Math.PI
+                * jariJari * jariJari * tinggi;
     }
 
-    public double getVolume() {
-        return volume;
+    @Override
+    public void LuasPermukaaan() {
+        LuasPermukaan = Math.PI * jariJari
+                * (jariJari + garisPelukis);
     }
-
-    public double getLuasPermukaan() {
-        return luasPermukaan;
-    }
-
-  
-    
 }

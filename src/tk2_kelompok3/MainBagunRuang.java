@@ -53,11 +53,11 @@ public class MainBagunRuang {
         System.out.printf("Luas Permukaan = %.2f%n", bola.getLuasPermukaan());
         System.out.println("");
 
-        // 3.Farid Kerucut
+       // 3.Farid Kerucut
         KerucutFarid kerucut = new KerucutFarid(7, 10, 12);
 
         kerucut.volume();
-        kerucut.luasPermukaan();
+        kerucut.LuasPermukaaan();
 
         System.out.println("------Kerucut------");
         System.out.println("Rumus Volume (V) = 1/3 * phi * r * r * t");
