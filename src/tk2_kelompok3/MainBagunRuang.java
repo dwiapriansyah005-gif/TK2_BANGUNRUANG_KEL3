@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package tk2_kelompok3;
+
 import model.*;
 
 /**
@@ -17,17 +18,18 @@ public class MainBagunRuang {
     public static void main(String[] args) {
         // TODO code application logic here
         // 1.Dwi Limas Segi Empat
+        // 1.Dwi Limas Segi Empat
         DwiLimassegiempat limas = new DwiLimassegiempat(15, 10, 5);
 
         limas.volume();
-        limas.luasPermukaan();
+        limas.LuasPermukaaan();
 
         System.out.println("------Limas Segi Empat------");
         System.out.println("Rumus Volume (V) = 1/3 * s * s * t");
         System.out.println("Rumus Luas Permukaan (L) = (s*s) + 4*(1/2 * s * tinggiSisi)");
-        System.out.println("Diketahui : s = " + (int) limas.getSisiAlas());
-        System.out.println("Diketahui : t = " + (int) limas.getTinggiLimas());
-        System.out.println("Diketahui : tinggiSisi = " + (int) limas.getTinggiSisi());
+        System.out.println("Diketahui : s = " + (int) limas.getSisi());
+        System.out.println("Diketahui : t = " + (int) limas.getTinggi());
+        System.out.println("Diketahui : tinggiSisi = " + (int) limas.getTinggiSisiTegak());
         System.out.println("Ditanya : V, L?");
 
         System.out.printf("Volume = %.2f%n", limas.getVolume());
@@ -86,7 +88,7 @@ public class MainBagunRuang {
         System.out.printf("Volume = %.2f%n", balok.getVolume());
         System.out.printf("Luas Permukaan = %.2f%n", balok.getLuasPermukaan());
         System.out.println("");
-        
+
         // 5. Natasza Tabung
         TabungNatasza tabung = new TabungNatasza(7, 10);
 
@@ -101,7 +103,7 @@ public class MainBagunRuang {
         System.out.printf("Volume = %.2f%n", tabung.volume());
         System.out.printf("Luas Permukaan = %.2f%n", tabung.luasPermukaan());
         System.out.println("");
-        
+
         // 6.Betrin Kubus
         KubusBetrin kubus = new KubusBetrin(14);
 

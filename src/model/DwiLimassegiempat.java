@@ -8,72 +8,59 @@ package model;
  *
  * @author macbookairm12020
  */
-public class DwiLimassegiempat {
-   
-    //Atribut
-    private double sisiAlas;
-    private double tinggiLimas;
-    private double tinggiSisi;
-    private double volume;
-    private double luasPermukaan;
+public class DwiLimassegiempat extends BangunRuang {
 
-    //Constructor
-    //jframe
+    // Atribut
+    private double sisi;
+    private double tinggi;
+    private double tinggiSisiTegak;
+
+    public DwiLimassegiempat(
+            double sisi, double tinggi, double tinggiSisiTegak) {
+        super();
+        this.sisi = sisi;
+        this.tinggi = tinggi;
+        this.tinggiSisiTegak = tinggiSisiTegak;
+    }
+
     public DwiLimassegiempat() {
-
+        super();
     }
 
-    //buat main
-    public DwiLimassegiempat(double sisiAlas, double tinggiLimas, double tinggiSisi) {
-        this.sisiAlas = sisiAlas;
-        this.tinggiLimas = tinggiLimas;
-        this.tinggiSisi = tinggiSisi;
-    }
-    
-    //Getter & Setter
-    public double getSisiAlas() {
-        return sisiAlas;
+    // Setter & Getter
+    public void setSisi(double sisi) {
+        this.sisi = sisi;
     }
 
-    public void setSisiAlas(double sisiAlas) {
-        this.sisiAlas = sisiAlas;
+    public double getSisi() {
+        return sisi;
     }
 
-    public double getTinggiLimas() {
-        return tinggiLimas;
+    public void setTinggi(double tinggi) {
+        this.tinggi = tinggi;
     }
 
-    public void setTinggiLimas(double tinggiLimas) {
-        this.tinggiLimas = tinggiLimas;
+    public double getTinggi() {
+        return tinggi;
     }
 
-    public double getTinggiSisi() {
-        return tinggiSisi;
+    public void setTinggiSisiTegak(double tinggiSisiTegak) {
+        this.tinggiSisiTegak = tinggiSisiTegak;
     }
 
-    public void setTinggiSisi(double tinggiSisi) {
-        this.tinggiSisi = tinggiSisi;
+    public double getTinggiSisiTegak() {
+        return tinggiSisiTegak;
     }
 
-    //Rumus
+    // Method hitung
+    @Override
     public void volume() {
-        volume = (1.0 / 3.0) * (sisiAlas * sisiAlas) * tinggiLimas;
+        Volume = (1.0 / 3.0) * sisi * sisi * tinggi;
     }
 
-    public void luasPermukaan() {
-        double luasAlas = sisiAlas * sisiAlas;
-        double luasSisiTegak = 4 * (0.5 * sisiAlas * tinggiSisi);
-        luasPermukaan = luasAlas + luasSisiTegak;
-
+    @Override
+    public void LuasPermukaaan() {
+        LuasPermukaan = (sisi * sisi)
+                + (2 * sisi * tinggiSisiTegak);
     }
-
-    //Getter 
-    public double getLuasPermukaan() {
-        return luasPermukaan;
-    }
-
-    public double getVolume() {
-        return volume;
-    }
-
 }

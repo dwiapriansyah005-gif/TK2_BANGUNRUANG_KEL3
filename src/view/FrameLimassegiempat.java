@@ -11,7 +11,7 @@ import model.*;
  * @author macbookairm12020
  */
 public class FrameLimassegiempat extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FrameLimassegiempat.class.getName());
 
     /**
@@ -21,16 +21,18 @@ public class FrameLimassegiempat extends javax.swing.JFrame {
     public FrameLimassegiempat() {
         initComponents();
         tNama.setText("Selamat Datang, " + user.namaUser + " Di Frame Limas Segiempat");
-        
-        reset ();
+
+        reset();
     }
-    void reset(){
-           tSisialas.setText(null);
+
+    void reset() {
+        tSisialas.setText(null);
         tTinggilimas.setText(null);
         tTinggisisi.setText(null);
         tVolume.setText("0");
         tLuasPermukaan.setText("0");
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -138,12 +140,12 @@ public class FrameLimassegiempat extends javax.swing.JFrame {
         // TODO add your handling code here:
         DwiLimassegiempat limas = new DwiLimassegiempat();
 
-        limas.setSisiAlas(Double.parseDouble(tSisialas.getText()));
-        limas.setTinggiLimas(Double.parseDouble(tTinggilimas.getText()));
-        limas.setTinggiSisi(Double.parseDouble(tTinggisisi.getText()));
+        limas.setSisi(Double.parseDouble(tSisialas.getText()));
+        limas.setTinggi(Double.parseDouble(tTinggilimas.getText()));
+        limas.setTinggiSisiTegak(Double.parseDouble(tTinggisisi.getText()));
 
         limas.volume();
-        limas.luasPermukaan();
+        limas.LuasPermukaaan();
 
         tVolume.setText(String.valueOf(limas.getVolume()));
         tLuasPermukaan.setText(String.valueOf(limas.getLuasPermukaan()));
@@ -151,7 +153,7 @@ public class FrameLimassegiempat extends javax.swing.JFrame {
 
     private void bResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bResetActionPerformed
         // TODO add your handling code here:
-       reset();
+        reset();
     }//GEN-LAST:event_bResetActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
