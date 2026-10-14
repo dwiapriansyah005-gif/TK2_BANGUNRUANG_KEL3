@@ -132,7 +132,7 @@ public class FrameKerucut extends javax.swing.JFrame {
         kerucut.setGarisPelukis(Double.parseDouble(tGaris.getText()));
 
         kerucut.volume();
-        kerucut.luasPermukaan();
+        kerucut.LuasPermukaaan();
 
         tVolume.setText(String.valueOf(kerucut.getVolume()));
         tLuaspermukaan.setText(String.valueOf(kerucut.getLuasPermukaan()));
