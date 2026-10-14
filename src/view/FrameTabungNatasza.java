@@ -11,7 +11,7 @@ import model.*;
  * @author User
  */
 public class FrameTabungNatasza extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FrameTabungNatasza.class.getName());
 
     /**
@@ -22,12 +22,13 @@ public class FrameTabungNatasza extends javax.swing.JFrame {
         tNama.setText("Selamat Datang, " + user.namaUser + " Di Frame Tabung");
         reset();
     }
-    public void reset(){
-       tJariJari.setText(null);
-       tTinggi.setText(null);
-       tLuasPermukaan.setText("0");
-       tVolume.setText("0");
-        
+
+    public void reset() {
+        tJariJari.setText(null);
+        tTinggi.setText(null);
+        tLuasPermukaan.setText("0");
+        tVolume.setText("0");
+
     }
 
     /**
@@ -138,12 +139,12 @@ public class FrameTabungNatasza extends javax.swing.JFrame {
         TabungNatasza tabung = new TabungNatasza();
         tabung.setJariJari(Double.parseDouble(tJariJari.getText()));
         tabung.setTinggi(Double.parseDouble(tTinggi.getText()));
-        
-        tabung.luasPermukaan();
+
         tabung.volume();
-        
-        tLuasPermukaan.setText(String.valueOf(tabung.luasPermukaan()));
-        tVolume.setText(String.valueOf(tabung.volume()));
+        tabung.LuasPermukaaan();
+
+        tLuasPermukaan.setText(String.valueOf(tabung.getLuasPermukaan()));
+        tVolume.setText(String.valueOf(tabung.getVolume()));
     }//GEN-LAST:event_btnHitungActionPerformed
 
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed

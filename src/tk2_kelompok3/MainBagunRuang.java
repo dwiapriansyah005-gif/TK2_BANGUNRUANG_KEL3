@@ -52,7 +52,7 @@ public class MainBagunRuang {
         System.out.printf("Volume = %.2f%n", bola.getVolume());
         System.out.printf("Luas Permukaan = %.2f%n", bola.getLuasPermukaan());
         System.out.println("");
-        
+
         // 3.Farid Kerucut
         KerucutFarid kerucut = new KerucutFarid(7, 10, 12);
 
@@ -100,8 +100,11 @@ public class MainBagunRuang {
         System.out.println("Diketahui : phi = " + String.format("%.2f", Math.PI));
         System.out.println("Ditanya : V, L?");
 
-        System.out.printf("Volume = %.2f%n", tabung.volume());
-        System.out.printf("Luas Permukaan = %.2f%n", tabung.luasPermukaan());
+        tabung.volume();
+        tabung.LuasPermukaaan();
+
+        System.out.printf("Volume = %.2f%n", tabung.getVolume());
+        System.out.printf("Luas Permukaan = %.2f%n", tabung.getLuasPermukaan());
         System.out.println("");
 
         // 6.Betrin Kubus
@@ -113,8 +116,11 @@ public class MainBagunRuang {
         System.out.println("Diketahui : s = " + (int) kubus.getSisi());
         System.out.println("Ditanya : V, L?");
 
-        System.out.printf("Volume = %.2f%n", kubus.volume());
-        System.out.printf("Luas Permukaan = %.2f%n", kubus.luasPermukaan());
+        kubus.volume();
+        kubus.LuasPermukaaan();
+
+        System.out.printf("Volume = %.2f%n", kubus.getVolume());
+        System.out.printf("Luas Permukaan = %.2f%n", kubus.getLuasPermukaan());
         System.out.println("");
     }
 

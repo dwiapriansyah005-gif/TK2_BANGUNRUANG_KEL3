@@ -1,28 +1,35 @@
 package model;
 
-public class KubusBetrin {
+public class KubusBetrin extends BangunRuang{
     //Atribut
     private double sisi;
-    private double volume;
-    private double luasPermukaan;
 
     public KubusBetrin(double sisi) {
+        super();
         this.sisi = sisi;
     }
-    public KubusBetrin(){
+
+    public KubusBetrin() {
+        super();
     }
-    
-    // Setter & Getter 
-    public void setSisi(double sisi) { this.sisi = sisi; }
-    public double getSisi() { return sisi; }
-    
-    // Method hitung (return)
-    public double volume() {
-        volume = sisi * sisi * sisi;
-        return volume;
+
+    // Setter & Getter
+    public void setSisi(double sisi) {
+        this.sisi = sisi;
     }
-    public double luasPermukaan() {
-        luasPermukaan= 6 * sisi * sisi;
-        return luasPermukaan;
+
+    public double getSisi() {
+        return sisi;
     }
+
+    // Method hitung
+    @Override
+public void volume() {
+    Volume = sisi * sisi * sisi;
+}
+
+@Override
+public void LuasPermukaaan() {
+    LuasPermukaan = 6 * sisi * sisi;
+}
 }

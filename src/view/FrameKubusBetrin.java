@@ -117,13 +117,13 @@ public class FrameKubusBetrin extends javax.swing.JFrame {
     private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
         // TODO add your handling code here:
         KubusBetrin kubus = new KubusBetrin();
-        kubus.setSisi(Double.parseDouble(tSisi.getText()));
-        
-        kubus.luasPermukaan();
-        kubus.volume();
-        
-        lLuasPermukaan.setText(String.valueOf(kubus.luasPermukaan()));
-        lVolume.setText(String.valueOf(kubus.volume()));
+    kubus.setSisi(Double.parseDouble(tSisi.getText()));
+
+    kubus.volume();
+    kubus.LuasPermukaaan();
+
+    lLuasPermukaan.setText(String.valueOf(kubus.getLuasPermukaan()));
+    lVolume.setText(String.valueOf(kubus.getVolume()));
     }//GEN-LAST:event_btnHitungActionPerformed
 
     private void btnKembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKembaliActionPerformed
